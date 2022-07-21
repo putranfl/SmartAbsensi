@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+</head>
+<body>
+
+{% include "navbar.html" %}
+
+<section class="py-1">
+    <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">
+            <h3>Data Mahasiswa</h3>
+            <hr>
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="/addprsn" type="button" class="btn btn-success btn-lg"><b>Tambah Mahasiswa</b></a>
+                </div>
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-4">
+                    <a href="/fr_page" type="button" class="btn btn-info btn-lg"><b>Absensi</b></a>
+                </div>
+            </div>
+
+            <br>
+            <table class="table" style="width: 80%">
+                <thead>
+                    <tr>
+                      <th>NIM</th>
+                        <th>Nama Mahasiswa</th>
+                        <th>Jurusan</th>
+                        <th>Prodi</th>
+                        <th>Kelas</th>
+                        <th>Keterangan</th>
+                        <th>Waktu</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                        <tr>
+                            <td>{{item[1]}}</td>
+                            <td>{{item[2]}}</td>
+                            <td>{{item[3]}}</td>
+                            <td>{{item[4]}}</td>
+                            <td>{{item[5]}}</td>
+                            <td>{{item[6]}}</td>
+                            <td>{{item[7]}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

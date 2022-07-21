@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "head.html" %}
+</head>
+<body>
+
+{% include "navbar.html" %}
+
+<section class="py-1">
+    <div class="row mt-5">
+        <div class="col-lg-8 offset-lg-2">
+            <h3>Add Personnel</h3>
+            <hr>
+            <form class="form" method="post" action="/addprsn_submit">
+                <div class="form-group row">
+                    <label for="txtid" class="col-sm-2 col-form-label">Id</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control" id="txtid" name="txtid" value={{ newnbr }} readonly>
+                    </div>
+                </div>
+                 <div class="form-group row">
+                    <label for="txtnim" class="col-sm-2 col-form-label">NIM</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtnim" name="txtnim" required>
+                    </div>
+                </div>
+                 <div class="form-group row">
+                    <label for="txtnama" class="col-sm-2 col-form-label">Nama Mahasiswa</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtnama" name="txtnama" required>
+                    </div>
+                </div>
+               <div class="form-group row">
+                    <label for="txtjurusan" class="col-sm-2 col-form-label">Jurusan</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtjurusan" name="txtjurusan" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="txtprodi" class="col-sm-2 col-form-label">Prodi</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtprodi" name="txtprodi" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="txtkelas" class="col-sm-2 col-form-label">Kelas</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="txtkelas" name="txtkelas" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label"></label>
+                    <div class="col-sm-8">
+                        <input type="submit" class="btn btn-primary btn-lg" value="Next">
+                        <a href="/" type="button" class="btn btn-warning btn-lg"><b>Back</b></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
